@@ -1,0 +1,850 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ruda:wght@400;600;700&display=swap");
+
+body {
+  font-family: 'Arial', 'sans-serif','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+header {
+  background-color: #f8f9fa;
+  padding: 0; /* Removed extra padding */
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 10px;
+  position: relative; /* Ensure relative positioning for absolute children */
+  overflow: hidden; /* Hide overflow to create the scrolling effect */
+}
+
+header .cut-image {
+  width: 100%; /* Set the width */
+  height: 100%; /* Set the height */
+  object-fit: cover; /* Ensures the image covers the entire container */
+}
+
+header .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; 
+  position: relative;
+}
+
+header .logo .iso-text {
+  
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative; /* Position relative to its container */
+}
+
+header .logo .iso-text span {
+  display: inline-block;
+  padding-right: 100%; /* Push the text to the left */
+  animation: scroll 7s linear infinite;
+  margin-top: 0;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(100%);
+  }
+}
+
+/* header .iso-text span{
+  margin-top: 0; /* Add some space between the image and the scrolling text 
+} */
+
+header .logo img {
+  height: 120px;
+  margin-left: 3rem;
+  margin-bottom: 0rem; /* Add some space between the image and the scrolling text */
+  margin-top: 0rem;
+  width: 220px;
+}
+
+
+.watsapp {
+
+  position: fixed;
+  right: 10px; /* Adjust as necessary to position from the right edge */
+  bottom: 10px;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adjust spacing between icons */
+}
+
+/* Style the icons */
+.watsapp a {
+  font-size: 24px; /* Adjust icon size */
+  /* color: #3d76f9; Adjust icon color */
+  text-decoration: none;
+}
+
+.watsapp a:hover {
+  color: #0073b1; /* Change icon color on hover */
+}
+
+.social-media {
+position: absolute;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 0.8rem; /* Font size */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    margin-left: 20rem; /* Adjust margin as needed */
+    overflow: hidden; /* Hide overflowing pseudo-element */
+    z-index: 1; /* Ensure text is above pseudo-element */
+}
+
+.social-media:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #266c97; /* Background color */
+  border-radius: inherit; /* Inherit border radius from parent */
+  filter: blur(8px); /* Blur effect */
+  z-index: -1; /* Behind the icon */
+}
+.social-media  i {
+  font-size: 0.8rem; /* Increase icon size */
+}
+
+.social-media  a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.social-media  a:hover {
+  text-decoration: underline; /* Underline on hover */
+  font-size: 1rem;
+}
+
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.menu.show {
+  display: flex;
+  flex-direction: column; 
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+nav {
+  background: linear-gradient(90deg, #e6f7ff, #ffffff); /* Light blue to white gradient */
+  padding: 0 0; /* Adjust padding as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0;
+  position: relative;
+}
+
+nav ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -5px; /* Adjust for spacing between items */
+  transform: translateY(-50%);
+  width: 1px;
+  height: 50%;
+  background-color: #ccc; /* Line color */
+}
+
+nav ul li a {
+  color: #005b96; /* Darker blue color for nav links */
+  text-decoration: none;
+  padding: 10px 15px; /* Adjust padding as needed */
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background color and text color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+nav ul li a:hover {
+  background-color: #cce7ff; /* Lighter blue background color on hover */
+  color: #003d66; /* Darker text color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+
+.header-text {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  overflow: hidden;
+
+}
+
+.header-text img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.header-text h1, 
+.header-text p {
+  position: absolute;
+  color: white;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  padding: 10px 20px; /* Add padding for better spacing */
+  background: rgba(83, 77, 77, 0.6); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.header-text h1 {
+  top: 30%;
+  font-size: 3em;
+  margin: 0;
+}
+
+.header-text p {
+  top: 50%;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 1;
+}
+
+.call-icon {
+  position: absolute;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px; /* Rounded corners */
+    font-size: 0.8rem; /* Font size */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    margin-left: 6rem; /* Adjust margin as needed */
+    overflow: hidden; /* Hide overflowing pseudo-element */
+    z-index: 1; /* Ensure text is above pseudo-element */
+}
+
+.call-icon:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #266c97; /* Background color */
+  border-radius: inherit; /* Inherit border radius from parent */
+  filter: blur(8px); /* Blur effect */
+  z-index: -1; /* Behind the icon */
+}
+.call-icon i {
+  font-size: 0.8rem; /* Increase icon size */
+}
+
+.call-icon a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.call-icon a:hover {
+  text-decoration: underline; /* Underline on hover */
+  font-size: 1rem;
+}
+
+
+/* Container to hold both the content and the video */
+.course-container {
+  display: flex;
+  justify-content: space-between; /* Ensures both sides have space in between */
+  align-items: flex-start; /* Aligns items at the start */
+  gap: 20px; /* Adds space between the columns */
+  margin: 20px;
+}
+
+.main_title {
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.main_title h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+  
+}
+
+.main_title p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.position-relative h1{
+  margin-left: 40px;
+  margin-right: 64.8rem;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  
+}
+
+.course-container h2{
+  font-size: large;
+}
+
+/* Course content styles */
+.course-content {
+  flex: 1; /* Takes up one part of the available space */
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Video section styles */
+.videos {
+  flex: 2; /* Takes up two parts of the available space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+/* Video element styles */
+.videos video {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Course cards styles */
+.course-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 20px;
+  padding-left: 30px;
+}
+
+/* Individual card styles */
+.card {
+  padding: 20px;
+  width: 100%;
+  max-width: 540px;
+  box-shadow: 8px 16px 16px rgba(42, 14, 14, 0.2);
+}
+
+.card:hover {
+  box-shadow: 8px 16px 16px rgba(53, 161, 175, 0.5);
+}
+
+/* Card image styles */
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align items at the top */
+  flex-wrap: wrap; /* Allow items to wrap if container is too narrow */
+}
+
+.footer-col {
+  flex: 0 0 calc(33.33% - 20px); /* Adjust width of each column (minus padding) */
+  padding: 10px;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.footer-col h3 {
+  margin-bottom: 20px;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 10px 0;
+}
+
+.footer-col ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: #fff;
+}
+
+.copyrights {
+  flex: 0 0 100%;
+  text-align: center;
+  margin-top: 20px;
+  color: #888;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  transition: opacity 0.3s ease;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-form input,
+.login-form select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form .btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form .btn:hover {
+  background-color: #45a049;
+}
+
+
+.view-more {
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+#viewMoreButton {
+  color: #333;
+  text-decoration: none;
+  text-align: center;
+  min-height: 4rem;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.go-back-arrow {
+  text-decoration: none;
+  color: cadetblue;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.go-back-btn {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  z-index: 1000;
+}
+
+main {
+  position: relative;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+
+.btn-secondary {
+  background-color: #0a4687;
+  border: none;
+}
+
+.btn-secondary a {
+   color: #c6d9ec;
+  }
+
+.btn1 {
+  background-color: cadetblue;
+  color: rgb(32, 29, 29);
+  border: none;
+  padding: 0 10px;
+  text-align: center;
+  margin: 0 5px;
+  cursor: pointer;
+  font-size: 1em;
+  height: 4rem;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  width: 150px;
+}
+
+.btn1:hover {
+  background-color: #74c2f6;
+}
+
+.btn1 a {
+  text-decoration: none;
+  color: #131313;
+}
+
+
+
+
+
+
+
+
+
+/* Avatar Styles */
+
+.avatar {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 33px;
+  height: 33px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-right: 8rem;
+}
+
+.logout-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 1rem;
+  right: 1rem;
+}
+
+.logout-menu .user-info {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.logout-menu .user-info i {
+  margin-right: 0.5rem;
+}
+
+.logout-menu .separator {
+  margin: 0;
+  border-top: 1px solid #ddd;
+}
+
+.logout-menu button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: #0062cc;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.logout-menu button:hover {
+  background-color: #004a99;
+}
+
+
+.small-text {
+  color: whitesmoke;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  width: 90px;
+  height: 2rem;
+  border-radius: 10px;
+}
+
+.loginbtn {
+  width: 30px; /* Adjust width to make the circle the desired size */
+  height: 30px; /* Adjust height to make the circle the desired size */
+  border-radius: 50%; /* Makes the button a circle */
+  background-color: #97999e; /* Button background color */
+  color: rgb(4, 49, 116); /* Text color */
+  font-size: 0.9rem; /* Font size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none; /* Remove default border */
+  outline: none; /* Remove default outline */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  margin-right: 8rem;
+  margin-bottom: 0rem; /* Add some space between the image and the scrolling text */
+  margin-top: 0rem; 
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.login-form input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #555;
+}
+/* =========resgistor form start */
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form h2 {
+  margin-bottom: 20px;
+}
+
+.register-form label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.register-form input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.register-form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background-color: #555;
+}
+
+
+
+@media (max-width: 767px) {
+  header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+  
+  header .logo img {
+    height: 80px; /* Adjusted height for mobile */
+    margin-right:auto;
+  }
+  
+  header .social-media {
+    display: flex; /* Hide desktop social media icons */
+   
+    margin-left: 2rem;
+  }
+  
+  
+  
+  header .social-media a {
+    margin: 0 5px;
+    color: #007bff;
+  }
+  
+  header .loginbtn {
+    position: flex; /* Reset position for mobile */
+    margin-left: auto; /* Align login button to the right */
+    margin-top: auto; /* Add margin to separate from social icons */
+  }
+  
+  
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+  
+  
+
+
+  .menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #000;
+  }
+  
+  .menu.show {
+    display: block;
+  }
+  
+  .menu li {
+    padding: 10px;
+  }
+  
+  .menu a {
+    color: rgb(217, 215, 232);
+    text-decoration: none;
+  }
+  
+  /* .menu-toggle {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  } */
+
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #007bff; /* Button background color */
+    color: #0a0808; /* Text color */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+}

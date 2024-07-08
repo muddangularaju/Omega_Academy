@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omega Infotech student Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="../styles/style1.css">   
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/omega.png" alt="OmegaInfotech Academy" class="cut-image">
+            <!-- <div class="iso-text">
+                <span>An ISO 2019 Certified Company</span>
+              </div> -->
+        </div>
+
+        <div class="call-icon">
+            <i class="fa fa-phone"></i> Call Us: <a href="tel:8317552769">8317552769</a>
+        </div>
+
+        <div class="social-media">
+            SOCIAL MEDIA :
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube-square"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+
+            <button id="loginButton" class="loginbtn" onclick="openLoginModal()">
+                <i class="fas fa-user"></i>
+            </button>
+                    <div id="avatar" class="avatar" style="display: none;" onclick="toggleLogoutMenu()"></div>
+  
+                    <div id="logoutMenu" class="logout-menu">
+                          <div class="user-info">
+                              <i class="fas fa-user"></i>
+                              <p id="user-name"></p>
+             
+                          </div>
+                      <hr class="separator">
+                       <button id="logout" onclick="logout()">
+                       <i class="fas fa-sign-out-alt"></i>Logout</button>
+                     </div>
+     
+             
+    </header>
+    <nav>
+        <div class="menu-toggle">☰</div>
+        <ul class="menu">
+            
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown" ><a class="dropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#" >All Courses</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="java_course.html">Java Full Stack</a></li>
+                    <li><a class="dropdown-item" href="python_course.html">Python Full Stack</a></li>
+                    <li><a class="dropdown-item" href="webdevelopment.html">Web Development</a></li>
+                    <li><a class="dropdown-item" href="UI&UX.html">Ui&Ux Designing</a></li>
+                    <li><a class="dropdown-item" href="productMngt.html">Product Management</a></li>
+                    <li><a class="dropdown-item" href="projectmgnt.html">Project Management</a></li>
+                    <li><a class="dropdown-item" href="BusinessAnaylst.html">Business Analysis</a></li>
+                    <li><a class="dropdown-item" href="sapBOD.html">SAP BODS</a></li>
+                </ul>
+            </li>
+            <!-- <li class="head-text"><a href="services.html">Services</a></li> -->
+            <!-- <li class="head-text"><a href="trainingCourses.html">Training</a></li> -->
+            <!-- <li class="head-text"><a href="#">Projects</a></li> -->
+            <li class="dropdown" ><a class="dropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#">Projects</a>
+                <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">RealTime Projects</a></li>
+                        <li><a class="dropdown-item" href="#">Student-Core Projects</a></li>
+                        <li><a class="dropdown-item" href="#">Student-Advance Projects</a></li>
+                    </ul>
+                </li>
+            <!-- <li class="head-text"><a href="internship.html">Internships</a></li> -->
+
+            <li class="dropdown" ><a class="dropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#">Careers</a>
+            <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="../jobs.html">Jobs</a></li>
+                    <li><a class="dropdown-item" href="../internship.html">Internships</a></li>
+                    <!-- <li><a class="dropdown-item" href="trainingCourses.html">Training</a></li> -->
+                </ul>
+            </li>
+            <li class="head-text"><a href="../aboutus.html">About Us</a></li>
+            <li class="head-text"><a href="../contactus.html">Contact Us</a></li>
+            <li class="head-text"><a href="../interBatches.html">New Batches</a></li>
+            <li class="head-text"><a href="webinar.html">Webinar</a></li>
+        </ul>
+    </nav>
+
+
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <form class="login-form" onsubmit="event.preventDefault(); login();">
+          <h2>Login to Courses</h2>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <button type="submit" class="btn">Login</button>
+          <p id="error-message" style="display: none; color: red;">Invalid username or password. Please try again.</p>
+          <div class="container registration">
+              <p>Don't have an account? Create a new account <a href="#" onclick="openRegisterModal(); closeLoginModal();">Registration</a>.</p>
+          </div>
+      </form>
+  </div>
+</div>
+
+<!-- Registration Modal -->
+<div id="registerModal" class="modal">
+  <div class="modal-content">
+      <span class="close" onclick="closeRegisterModal()">&times;</span>
+      <form class="register-form" onsubmit="event.preventDefault(); register();">
+          <h2>Register for Courses</h2>
+          <label for="reg-username">Username:</label>
+          <input type="text" id="reg-username" name="username" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="reg-password">Password:</label>
+          <input type="password" id="reg-password" name="password" required>
+          <button type="submit" class="btn">Register</button>
+          <p id="reg-error-message" style="display: none; color: red;">Registration failed. Please try again.</p>
+      </form>
+  </div>
+</div>
+    <main class="position-relative">
+        <!-- <div class="go-back-btn">
+            <button class="btn btn-secondary" onclick="window.history.back();"><a href="../index.html">Go Back</a></button>
+        </div> -->
+        <h1 id="blue">Python Tutorials</h1>
+
+        <div class="course-container">
+            <div class="course-content">
+              <h2>Python Course Content</h2>
+              <ul id="courseContentList">
+                <li data-video="python1.mp4">Python Tutorial for Beginners<br><small>Overview</small></li>
+                <li data-video="video2.mp4">How to Install Python on Windows<br><small>Lesson-1</small></li>
+                <li data-video="video3.mp4">Python Variables<br><small>Lesson-2</small></li>
+                <li data-video="video4.mp4">Comments in Python<br><small>Lesson-3</small></li>
+                <li data-video="video5.mp4">Python If-Else Statement<br><small>Lesson-4</small></li>
+                <li data-video="video6.mp4">Python Numbers: Integers, Floats, Complex Numbers<br><small>Lesson-5</small></li>
+                <li data-video="video7.mp4">Python Strings<br><small>Lesson-6</small></li>
+                <li data-video="video8.mp4">The Basics of Python Loops<br><small>Lesson-7</small></li>
+                <li data-video="video9.mp4">Python For Loops With Examples<br><small>Lesson-8</small></li>
+                <li data-video="video10.mp4">Introduction to Python While Loop<br><small>Lesson-9</small></li>
+                <li data-video="video11.mp4">Python Arrays<br><small>Lesson-10</small></li>
+                <li data-video="video12.mp4">Python List<br><small>Lesson-11</small></li>
+                <li data-video="video13.mp4">Python Sets and Dictionaries<br><small>Lesson-12</small></li>
+                <li data-video="video14.mp4">Python Tuples<br><small>Lesson-13</small></li>
+                <li data-video="video15.mp4">Python Slicing<br><small>Lesson-14</small></li>
+                <li data-video="video16.mp4">Regular Expression (RegEX)<br><small>Lesson-15</small></li>
+                <li data-video="video17.mp4">Python Functions<br><small>Lesson-16</small></li>
+                <li data-video="video18.mp4">Objects and Classes in Python: Create, Modify, and Delete<br><small>Lesson-17</small></li>
+                <li data-video="video19.mp4">Python OOPs Concept<br><small>Lesson-18</small></li>
+                <li data-video="video20.mp4">Python Threading<br><small>Lesson-19</small></li>
+                <li data-video="video21.mp4">Getting Started With Jupyter Network<br><small>Lesson-20</small></li>
+                <li data-video="video22.mp4">PyCharm<br><small>Lesson-21</small></li>
+                <li data-video="video23.mp4">NumPy for Beginners<br><small>Lesson-22</small></li>
+                <li data-video="video24.mp4">Pandas for Beginners<br><small>Lesson-23</small></li>
+                <li data-video="video25.mp4">Matplotlib for Beginners<br><small>Lesson-24</small></li>
+                <li data-video="video26.mp4">Topic 25</li>
+                <li data-video="video27.mp4">Topic 26</li>
+                <li data-video="video28.mp4">Topic 27</li>
+              </ul>
+            </div>
+            <div class="videos">
+              <h2>Videos</h2>
+              <video id="videoPlayer" controls>
+                <source id="videoSource" src="../video/python1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          
+          
+</main>
+<footer>
+    <div class="container">
+        <div id="about" class="footer-col">
+            <h3>About Us</h3>
+            <p>Omega Academy, is a global IT Services & Technology Consulting Company with over 5 Years of Industry Experties in Application Services , Enterprise Solutions and Digital Transformation Solutions across Industry.</p>
+            <div class="social-icons-footer">
+                <i class="fa fa-facebook-square"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-youtube-square"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+        </div>
+        <!--footer-col-->
+        <div class="footer-col footer-2-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li>Home</li>
+                <li>Courses</li>
+                <li>Resources</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <!--footer-col-->
+        <div class="footer-col">
+            <h3>Contact Us</h3>
+            <p><i class="fa fa-envelope-o"></i> <a href="mailto:demo@gmail.com">contact@omegaacademy.in</a></p>
+            <p><i class="fa fa-mobile-phone"></i> <a href="8317552769"></a>8317552769</p>
+            <p><i class="fa fa-map-o"></i> <span>Nacharam,Hyderabad</span></p>
+        </div>
+        <!--footer-col-->
+        <center>
+        <div class="clear"></div>
+        <hr class="footer-hr">
+       <!--  <div class="copyright">
+            &copy; Copyright@2023 <strong>Omega Academy</strong>. All Rights
+            Reserved
+        </div>
+          <div class="credits">
+            Designed by
+            <a href="https://omegainfotech.in/">
+              Omega InfoTech
+            </a>
+        </div> -->
+    </center>
+    </div>
+</footer>
+</section>
+    <!--Script for tutorials-->
+
+    <script src="../scripts/webinarscript.js"></script>
+    <script src="../scripts/tutorial.js"></script> 
+    <script src="../scripts/loginAndRegistartion.js"></script> 
+</body>
+</html>

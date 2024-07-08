@@ -1,0 +1,192 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css'>
+<script src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js'></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.css">
+<link rel="stylesheet" href="styles/trainingcourses.css">
+<script src='scripts/training.js'></script>
+
+<div class="popular_courses">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="main_title">
+                    <h2 class="mb-3">Our Popular Courses</h2>
+                    <p>
+                        Most Trending Courses In the Current Market
+                    </p>
+                </div>
+            </div>
+        </div>
+        <section id="courses">
+            <div class="course-cards">
+               <div class="card mb-3" style="max-width: 540px;">
+                   <div class="row g-0">
+                       <div class="col-md-4">
+                           <img src="images/python.jpg" class="img-fluid rounded-start" alt="...">
+                           <button onclick="showCourseContent('python')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/python_course.html">Python Tutorial</a></button>
+                           
+                       </div>
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <h5 class="card-title">Python Tutorial for Beginners</h5>
+                               <p class="card-text">Learn the basics of Python programming.</p>
+                               <p class="card-text"><small class="text-muted">24 Lessons</small></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           
+               <div class="card mb-3" style="max-width: 540px;">
+                   <div class="row g-0">
+                       <div class="col-md-4">
+                           <img src="images/javascript.jpg" class="img-fluid rounded-start" alt="...">
+                           <button onclick="showCourseContent('javascript')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/JavaScript_course.html">JavaScript Tutorial</a></button>
+                       </div>
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <h5 class="card-title">JavaScript Tutorial for Beginners</h5>
+                               <p class="card-text">Learn the basics of JavaScript programming.</p>
+                               <p class="card-text"><small class="text-muted">20 Lessons</small></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               
+               <div class="card mb-3" style="max-width: 540px;">
+                   <div class="row g-0">
+                       <div class="col-md-4">
+                           <img src="images/java.jpg" class="img-fluid rounded-start" alt="...">
+                           <button onclick="showCourseContent('java')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/java_course.html">Java Tutorial</a></button>
+                       </div>
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <h5 class="card-title">Java Tutorial for Beginners</h5>
+                               <p class="card-text">Learn the basics of Java.</p>
+                               <p class="card-text"><small class="text-muted">30 Lessons</small></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           
+               <div class="card mb-3" style="max-width: 540px;">
+                   <div class="row g-0">
+                       <div class="col-md-4">
+                           <img src="images/csharp.jpg" class="img-fluid rounded-start" alt="...">
+                           <button onclick="showCourseContent('csharp')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/Csharp_course.html">C# Tutorial</a></button>
+                       </div>
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <h5 class="card-title">C# Tutorial for Beginners</h5>
+                               <p class="card-text">Learn the basics of C#.</p>
+                               <p class="card-text"><small class="text-muted">24 Lessons</small></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           
+               <div class="card mb-3 hidden" style="max-width: 540px;">
+                   <div class="row g-0">
+                       <div class="col-md-4">
+                           <img src="images/cpp.jpg" class="img-fluid rounded-start" alt="...">
+                           <button onclick="showCourseContent('cpp')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/c++_course.html">C++ Tutorial</a></button>
+                       </div>
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <h5 class="card-title">C++ Tutorial for Beginners</h5>
+                               <p class="card-text">Learn the basics of C++ programming.</p>
+                               <p class="card-text"><small class="text-muted">23 Lessons</small></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           
+               <div class="card mb-3 hidden" style="max-width: 540px;">
+                   <div class="row g-0">
+                       <div class="col-md-4">
+                           <img src="images/ruby.jpg" class="img-fluid rounded-start" alt="...">
+                           <button onclick="showCourseContent('ruby')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/Ruby_course.html">Ruby Tutorial</a></button>
+                       </div>
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <h5 class="card-title">Ruby Tutorial for Beginners</h5>
+                               <p class="card-text">Learn the basics of Ruby programming.</p>
+                               <p class="card-text"><small class="text-muted">23 Lessons</small></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           
+               <div class="card mb-3 hidden" style="max-width: 540px;">
+                   <div class="row g-0">
+                       <div class="col-md-4">
+                           <img src="images/php.jpg" class="img-fluid rounded-start" alt="...">
+                           <button onclick="showCourseContent('php')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/php_course.html">PHP Tutorial</a></button>
+                       </div>
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <h5 class="card-title">PHP Tutorial for Beginners</h5>
+                               <p class="card-text">Learn the basics of PHP programming.</p>
+                               <p class="card-text"><small class="text-muted">24 Lessons</small></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           
+               <div class="card mb-3 hidden" style="max-width: 540px;">
+                   <div class="row g-0">
+                       <div class="col-md-4">
+                           <img src="images/sql.jpg" class="img-fluid rounded-start" alt="...">
+                           <button onclick="showCourseContent('sql')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/sql_course.html">SQL Tutorial</a></button>
+                       </div>
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <h5 class="card-title">SQL Tutorial for Beginners</h5>
+                               <p class="card-text">Learn the basics of SQL.</p>
+                               <p class="card-text"><small class="text-muted">20 Lessons</small></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           
+               <div class="card mb-3 hidden" style="max-width: 540px;">
+                   <div class="row g-0">
+                       <div class="col-md-4">
+                           <img src="images/html.jpg" class="img-fluid rounded-start" alt="...">
+                           <button onclick="showCourseContent('html')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/html_course.html">HTML Tutorial</a></button>
+                       </div>
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <h5 class="card-title">HTML Tutorial for Beginners</h5>
+                               <p class="card-text">Learn the basics of HTML.</p>
+                               <p class="card-text"><small class="text-muted">20 Lessons</small></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="card mb-3 hidden" style="max-width: 540px;">
+                   <div class="row g-0">
+                       <div class="col-md-4">
+                           <img src="images/css.jpg" class="img-fluid rounded-start" alt="...">
+                           <button onclick="showCourseContent('css')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/CSS_course.html">CSS Tutorial</a></button>
+                       </div>
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <h5 class="card-title">CSS Tutorial for Beginners</h5>
+                               <p class="card-text">Learn the basics of CSS.</p>
+                               <p class="card-text"><small class="text-muted">20 Lessons</small></p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           
+           </section>
+               <!-- Add more course cards similarly -->
+           
+           </div>
+           
+            <div id="viewMoreButton" class="view-more" onclick="toggleCourseVisibility()">View More</div>
+           
+           <div id="courseContentContainer"></div>
+           
+           

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="styles/contactstyle.css">
+	<title>Contact us Page</title>
+</head>
+
+<body>
+	<!-- Header section -->
+	<header>
+		<div class="logo">
+            
+            <img src="images/OIT Logo2.png" alt="OmegaInfotech Academy">
+            <span class="iso-text">An ISO 2019 Certified Company</span>
+        </div>
+		<div class="social-media">
+            <!-- <p>FOLLOW US SOCIAL MEDIA :</p> -->
+            <!-- <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook-square"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                <i class="fab fa-youtube-square"></i>
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div> -->
+
+
+        <button id="loginButton" class="loginbtn"  onclick="openLoginModal()">Login</button>
+                <div id="avatar" class="avatar" onclick="toggleLogoutMenu()"></div>
+
+                <div id="avatar" class="avatar" style="display: none;" onclick="toggleLogoutMenu()">Avatar</div>
+         
+                <div id="logoutMenu" class="logout-menu">
+                      <div class="user-info">
+                          <i class="fas fa-user"></i>
+                          <p id="user-name"></p>
+         
+                      </div>
+                  <hr class="separator">
+                   <button id="logout" onclick="logout()">
+                   <i class="fas fa-sign-out-alt"></i>Logout</button>
+                 </div>
+		<!-- <button class="reachUs-button">Call us</button> -->
+	</header>
+       
+    <nav>
+        <div class="menu-toggle">☰</div>
+        <ul class="menu">
+            
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown" ><a class="dropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#" >All Courses</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/java_course.html">Java</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/python_course.html">Python</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/html_course.html">HTML</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/CSS_course.html">CSS</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/JavaScript_course.html">JavaScript</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/c++_course.html">C++</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/Csharp_course.html">C#</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/Ruby_course.html">Ruby</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/php_course.html">PHP</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/sql_course.html">SQL</a></li>
+                </ul>
+            </li>
+            <li class="head-text"><a href="#">Services</a></li>
+            <li class="head-text"><a href="#">Training</a></li>
+            <li class="head-text"><a href="#">Projects</a></li>
+            <li class="head-text"><a href="#">Internships</a></li>
+            <li class="head-text"><a href="#">Careers</a></li>
+            <li class="head-text"><a href="#about">About</a></li>
+            <li class="head-text"><a href="#">New Batches</a></li>
+            <li class="head-text"><a id="webinarButton" href="#">Webinar</a></li>
+        </ul>
+    </nav>
+    
+    
+
+    <div class="call-icon">
+        <i class="fa fa-phone"></i> Call Us: <a href="tel:8317552769">8317552769</a>
+    </div>
+
+    <div class="social-media">
+        <!-- <p>FOLLOW US SOCIAL MEDIA :</p> -->
+        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube-square"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://whatsapp.com/channel/0029VagLSLO6LwHiUe5LQt3x" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:50px;height:50px;">
+        </a>
+    </div>
+
+
+	<!-- banner section -->
+	<section class="banner">
+		<img src="images/messagingicon.jpg"
+			alt="Welcome to our Contact Us page">
+		<h1>Get in Touch With Us</h1>
+		<p>
+		We're here to answer any questions you may have.
+		</p>
+	</section>
+
+	<!-- Contact form -->
+	<section class="contact-form">
+		<div class="form-container">
+			<h2>Your Details</h2>
+			<form action="#" method="POST">
+
+				<label for="name">Name: </label>
+				<input type="text" id="name" name="name" required>
+
+				<label for="email">Email: </label>
+				<input type="email" id="email" name="email" required>
+
+				<label for="phone">Phone: </label>
+				<input type="tel" id="phone" name="phone">
+
+				<label for="message">Message: </label>
+				<textarea id="message" name="message" rows="4" required></textarea>
+
+				<button type="submit" class="submit-button">Submit</button>
+			</form>
+		</div>
+	</section>
+
+	<!-- Company contact info -->
+	<section class="contact-info">
+		<h2>Contact Information</h2>
+		<address>
+			OmegaInfotechAcademy<br>
+			Nacharam Main Street<br>
+			Hyderabad, Telangana 500076<br>
+			Phone: <a href="8317552769"></a>8317552769</p><br>
+			Email: <a href="mailto:demo@gmail.com">contact@omegaacademy.in</a>
+		</address>
+	</section>
+
+	<!-- Footer section -->
+	<footer>
+		<p>
+		© 2019 OmegaInfotechAcademy. All rights reserved.
+		</p>
+	</footer>
+	<script src="scripts/contactscript.js"></script>
+    
+</body>
+
+</html>

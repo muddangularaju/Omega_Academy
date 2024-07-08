@@ -1,0 +1,99 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    background: #333;
+    color: white;
+}
+
+.contact-section {
+    position: relative;
+    min-height: calc(100vh - 80px); /* Subtracting header height */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the left */
+    padding: 20px; /* Add some padding for better spacing */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.contact-section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 2;
+}
+
+.contact-form {
+    position: relative;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px; /* Reduced padding */
+    border-radius: 10px;
+    max-width: 400px; /* Reduced max-width */
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 35px; /* Add margin-right for spacing from the window edge */
+}
+
+.contact-form h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.contact-form p {
+    margin-bottom: 20px;
+    font-size: 1em;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #555;
+}

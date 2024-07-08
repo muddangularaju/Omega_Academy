@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omega Infotech student Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="styles/style1.css">   
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Rubik:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/omega.png" alt="OmegaInfotech Academy" class="cut-image">
+            
+        </div>
+
+        <div class="call-icon">
+            <i class="fa fa-phone"></i> Call Us: <a href="tel:8317552769">8317552769</a>
+        </div>
+        
+        <div class="social-media">
+                SOCIAL MEDIA :
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube-square"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+
+            <button id="loginButton" class="loginbtn" onclick="openLoginModal()">
+                <i class="fas fa-user"></i>
+            </button>
+                    <div id="avatar" class="avatar" style="display: none;" onclick="toggleLogoutMenu()"></div>
+
+             
+                    <div id="logoutMenu" class="logout-menu">
+                          <div class="user-info">
+                              <i class="fas fa-user"></i>
+                              <p id="user-name"></p>
+             
+                          </div>
+                      <hr class="separator">
+                       <button id="logout" onclick="logout()">
+                       <i class="fas fa-sign-out-alt"></i>Logout</button>
+                     </div>
+     
+             
+    </header>
+    <nav>
+        <div class="menu-toggle">☰</div>
+        <ul class="menu">
+            
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown" ><a class="dropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#" >All Courses</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/java_course.html">Java Full Stack</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/python_course.html">Python Full Stack</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/JavaScript_course.html">Web Development</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/UI&UX.html">Ui&Ux Designing</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/productMngt.html">Product Management</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/projectmgnt.html">Project Management</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/BusinessAnaylst.html">Business Analysis</a></li>
+                    <li><a class="dropdown-item" href="tutorials_htmlFiles/sapBOD.html">SAP BODS</a></li>
+                </ul>
+            </li>
+            <!-- <li class="head-text"><a href="services.html">Services</a></li> -->
+            <!-- <li class="head-text"><a href="trainingCourses.html">Training</a></li> -->
+            <!-- <li class="head-text"><a href="#">Projects</a></li> -->
+            <li class="dropdown" ><a class="dropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#">Projects</a>
+                <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">RealTime Projects</a></li>
+                        <li><a class="dropdown-item" href="#">Student-Core Projects</a></li>
+                        <li><a class="dropdown-item" href="#">Student-Advance Projects</a></li>
+                    </ul>
+                </li>
+            <!-- <li class="head-text"><a href="internship.html">Internships</a></li> -->
+
+            <li class="dropdown" ><a class="dropdown" data-bs-toggle="dropdown" aria-expanded="false" href="#">Careers</a>
+            <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="jobs.html">Jobs</a></li>
+                    <li><a class="dropdown-item" href="internship.html">Internships</a></li>
+                    <!-- <li><a class="dropdown-item" href="trainingCourses.html">Training</a></li> -->
+                </ul>
+            </li>
+            <li class="head-text"><a href="aboutus.html">About Us</a></li>
+            <li class="head-text"><a href="contactus.html">Contact Us</a></li>
+            <li class="head-text"><a href="interBatches.html">New Batches</a></li>
+            <li class="head-text"><a href="tutorials_htmlFiles/webinar.html">Webinar</a></li>
+        </ul>
+    </nav>
+    
+
+    <main>
+        <div class="header-text">
+            <img src="images/aboutus.png" alt="About Us">
+            <!-- <h1>Welcome to Omega Academy</h1>
+            <p>Welcome to OmegaInfotech Academy, your gateway to a world of knowledge, innovation, and professional growth. We are delighted to have you here and look forward to being a part of your learning journey.</p>     -->
+        <div class="overlay"></div>
+        </div>
+    <!-- <hr> -->
+    
+    <div class="watsapp">
+        <a href="https://whatsapp.com/channel/0029VagLSLO6LwHiUe5LQt3x" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:50px;height:50px;">
+        </a>
+    </div>
+  
+    <!-- Login Modal -->
+
+    <div id="webinarModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Now Available Meeting</h2>
+            <p>Meeting Time: 3:00 PM - 4:00 PM</p>
+            <p>Join us for an insightful webinar on the latest trends in technology!</p>
+            <button class="join-button" onclick="window.open('https://meet.google.com/vaa-mncj-ngb', '_blank')">Join Webinar</button>
+        </div>
+    </div>
+    
+
+    <!-- <div id="loginModal" class="modal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="loginModalLabel">Login as</h2>
+                    <button type="button" class="btn-close" onclick="closeLoginModal()" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="openAdminLoginModal()">Admin</button><br>
+                        <button class="btn btn-primary" onclick="openTrainerLoginModal()">Trainer</button><br>
+                        <button class="btn btn-primary" onclick="openUserLoginModal()">User</button><br>
+                    </div>
+                    <div class="container registration">
+                        <p>Don't have an account? Create a new account <a href="#" onclick="openRegisterModal(); closeLoginModal();">Registration</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+    <!-- <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="login(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="role">Role:</label>
+                <select id="role" name="role" required>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                    <option value="trainer">Trainer</option>
+                </select>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div> -->
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <form class="login-form" onsubmit="event.preventDefault(); login();">
+                <h2>Login</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <label for="role">Role:</label>
+                <select id="role" name="role" required>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                    <option value="trainer">Trainer</option>
+                </select>
+                <button type="submit" class="btn">Login</button>
+                <p id="error-message" style="display: none; color: red;">Invalid username or password. Please try again.</p>
+                <div class="container registration">
+                    <p>Don't have an account? Create a new account <a href="#" onclick="openRegisterModal(); closeLoginModal();">Registration</a>.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- <div id="trainerLoginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTrainerLoginModal()">&times;</span>
+            <form class="login-form" onsubmit="event.preventDefault(); trainerLogin();">
+                <h2>Trainer Login</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="btn">Login</button>
+                <p id="error-message" style="display: none; color: red;">Invalid username or password. Please try again.</p>
+                <div class="container registration">
+                    <p>Don't have an account? Create a new account <a href="#" onclick="openRegisterModal(); closeLoginModal();">Registration</a>.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+    <div id="userLoginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeUserLoginModal()">&times;</span>
+            <form class="login-form" onsubmit="event.preventDefault(); userLogin();">
+                <h2>User Login</h2>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="btn">Login</button>
+                <p id="error-message" style="display: none; color: red;">Invalid username or password. Please try again.</p>
+                <div class="container registration">
+                    <p>Don't have an account? Create a new account <a href="#" onclick="openRegisterModal(); closeLoginModal();">Registration</a>.</p>
+                </div>
+            </form>
+        </div>
+    </div>-->
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegisterModal()">&times;</span>
+            <form class="register-form" onsubmit="event.preventDefault(); register();">
+                <h2>Register for Courses</h2>
+                <label for="reg-username">Username:</label>
+                <input type="text" id="reg-username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="reg-password">Password:</label>
+                <input type="password" id="reg-password" name="password" required>
+                <button type="submit" class="btn">Register</button>
+                <p id="reg-error-message" style="display: none; color: red;">Registration failed. Please try again.</p>
+            </form>
+        </div>
+    </div> 
+
+    <div class="course-cards">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="images/python.jpg" class="img-fluid rounded-start" alt="...">
+                    <button onclick="showCourseContent('python')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/python_course.html">Python Tutorial</a></button>
+                    <!-- <button type="button" class="btn1 btn-primary" onclick="openRegisterModal()">Python Tutorial</button> -->
+     
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Python Tutorial for Beginners</h5>
+                        <p class="card-text">Learn the basics of Python programming.</p>
+                        <p class="card-text"><small class="text-muted">24 Lessons</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="images/java.jpg" class="img-fluid rounded-start" alt="...">
+                    <button onclick="showCourseContent('java')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/java_course.html">Java Tutorial</a></button>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Java Tutorial for Beginners</h5>
+                        <p class="card-text">Learn the basics of Java.</p>
+                        <p class="card-text"><small class="text-muted">30 Lessons</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="images/htmlcssjavascript.jpg" class="img-fluid rounded-start" alt="...">
+                    <button onclick="showCourseContent('javascript')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/webdevelopment.html">Web Development</a></button>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Html/Css/JavaScript Tutorial for Beginners</h5>
+                        <p class="card-text">Learn the basics of JavaScript programming.</p>
+                        <p class="card-text"><small class="text-muted">20 Lessons</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="images/uiux.avif" class="img-fluid rounded-start" alt="...">
+                    <button onclick="showCourseContent('ruby')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/UI&UX.html">UI&UX Tutorial</a></button>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">UI&UX Tutorial for Beginners</h5>
+                        <p class="card-text">Learn the basics of UI&UX programming.</p>
+                        <!-- <p class="card-text"><small class="text-muted">23 Lessons</small></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    
+        <div class="card mb-3 hidden" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="images/product.jpg" class="img-fluid rounded-start" alt="...">
+                    <button onclick="showCourseContent('csharp')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/productMngt.html">Product Management</a></button>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Product Management Tutorial for Beginners</h5>
+                        <p class="card-text">Learn the basics of Product Management.</p>
+                        <!-- <p class="card-text"><small class="text-muted">24 Lessons</small></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3 hidden" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="images/projectmngt.jpeg" class="img-fluid rounded-start" alt="...">
+                    <button onclick="showCourseContent('cpp')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/projectmgnt.html">Project Management</a></button>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Management Tutorial for Beginners</h5>
+                        <p class="card-text">Learn the basics of Project Management.</p>
+                        <!-- <p class="card-text"><small class="text-muted">23 Lessons</small></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3 hidden" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="images/businessAnalst.jpeg" class="img-fluid rounded-start" alt="...">
+                    <button onclick="showCourseContent('ruby')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/BusinessAnaylst.html">BusinessAnaylst</a></button>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">BusinessAnaylst Tutorial for Beginners</h5>
+                        <p class="card-text">Learn the basics of BusinessAnaylst programming.</p>
+                        <!-- <p class="card-text"><small class="text-muted">23 Lessons</small></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card mb-3 hidden" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="images/sapBods.jpeg" class="img-fluid rounded-start" alt="...">
+                    <button onclick="showCourseContent('php')" class="btn1 btn-primary"><a href="tutorials_htmlFiles/sapBOD.html">SAP BOD</a></button>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">SAP BOD Tutorial for Beginners</h5>
+                        <p class="card-text">Learn the basics of SAP BOD programming.</p>
+                        <!-- <p class="card-text"><small class="text-muted">24 Lessons</small></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        
+    </section>
+     <div id="viewMoreButton" class="view-more" onclick="toggleCourseVisibility()">View More</div>
+    
+    <div id="courseContentContainer"></div>
+</main>
+<footer>
+
+<div class="container"> 
+        <div id="about" class="footer-col">
+            <h3>About Us</h3>
+            <p>Omega Academy, is a global IT Services & Technology Consulting Company with over 5 Years of Industry Experties in Application Services , Enterprise Solutions and Digital Transformation Solutions across Industry.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube-square"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    
+        <!--footer-col-->
+        <div class="footer-col footer-2-col">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <!--footer-col-->
+         <!-- <section id="contact-us">  -->
+        <div id="Contact" class="footer-col">
+            <p><i class="fa fa-mobile-phone"></i> <a href="8317552769"></a>8317552769</p>
+            <p><i class="fa fa-map-o"></i> <span>Nacharam,Hyderabad</span></p>
+            <p><i class="fa fa-envelope-o"></i> <a href="mailto:demo@gmail.com">contact@omegaacademy.in</a></p>
+        </div>
+    <!-- </section> -->
+
+    <div id="copyrights" class="copyrights">
+        <p>
+            © 2019 OmegaInfotechAcademy. All rights reserved.
+            </p>
+    </div>
+</div>
+
+
+        
+  </footer>
+<script src="scripts/loginAndRegistartion.js"></script>
+
+</body>
+</html>
